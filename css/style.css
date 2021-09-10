@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.green-white {
+    background: rgb(54,166,119); 
+    background: linear-gradient(180deg, rgba(54,166,119,1) 15%, rgba(232,242,215,1) 15%);
+}
+
+.container {
+    height: 100vh;
+}
