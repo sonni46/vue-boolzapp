@@ -96,6 +96,23 @@
     align-items: center;
 }
 
+.contact{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00000024;
+}
+
+.rubric {
+    
+}
+
+.contact img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
 /* utenti  *//* utenti  *//* utenti  *//* utenti  */
 
 /* font  *//* font  *//* font  *//* font  *//* font  */
@@ -142,6 +159,7 @@
 /* color  *//* color  *//* color  *//* color  */
 
 /* background *//* background *//* background */
+
 .green-white {
     background: rgb(54,166,119); 
     background: linear-gradient(180deg, rgba(54,166,119,1) 14%, rgba(232,242,215,1) 14%);
@@ -156,3 +174,11 @@
 .pad-l-10 {
     padding-left: 10px;
 }
+
+/* :hover *//* :hover *//* :hover *//* :hover *//* :hover */
+
+.contact:hover {
+    background-color: #d1d1d154
+}
+
+/* :hover *//* :hover *//* :hover *//* :hover *//* :hover */

@@ -9,7 +9,7 @@
     <!-- css  -->
 
     <!-- vue.js  -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <!-- vue.js  -->
 
     <!-- font  -->
@@ -47,6 +47,12 @@
                     <i class="fas fa-search"></i>
                     <input class="search" type="text" placeholder=" Cerca o inizia una nuova chat" >
                 </div>
+                <div class="rubric">
+                    <div v-for="key in contacts" class="contact pad-l-10" id="cont">
+                        <img :src="`img/avatar${key.avatar}.jpg`" alt="">
+                        <span class="pad-l-10">{{key.name}}</span>
+                    </div>
+                </div>
             </div>
             <div class="col-1">
                 <div class="friend">
@@ -62,9 +68,12 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
+                <div>
+                    
+                </div>
             </div>
         </div>
     </div>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

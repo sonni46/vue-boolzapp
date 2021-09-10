@@ -1,4 +1,4 @@
-VTTCue.config.devtools = true;
+Vue.config.devtools = true;
 const app = new Vue (
     {
         el:"#root",
@@ -85,6 +85,9 @@ const app = new Vue (
                     ],
                 },
             ],
+            methods : {
+                
+            }
         }
     }
 )
