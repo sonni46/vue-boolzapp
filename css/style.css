@@ -18,6 +18,22 @@
     margin: 0 auto;
     background-color: white;
 }
+/* search *//* search *//* search *//* search */
+.search {
+    width: 80%;
+    height: 30px;
+    border: transparent;
+    outline:none;
+}
+
+.search-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* search *//* search *//* search *//* search */
 
 /* col  *//* col  *//* col  *//* col  */
 
@@ -112,11 +128,16 @@
     color: #9de1fe;
 }
 
+.search-bar .fas{
+    background-color: white;
+    padding: 7px 25px;
+}
+
 /* font  *//* font  *//* font  *//* font  *//* font  */
 
 /* color  *//* color  *//* color  *//* color  */
-.color {
-    color: #948f8f;
+.traspar {
+    color: #00000066;
 }
 /* color  *//* color  *//* color  *//* color  */
 
@@ -124,6 +145,10 @@
 .green-white {
     background: rgb(54,166,119); 
     background: linear-gradient(180deg, rgba(54,166,119,1) 14%, rgba(232,242,215,1) 14%);
+}
+
+.ede{
+    background-color: #ededed
 }
 
 /* background *//* background *//* background */
