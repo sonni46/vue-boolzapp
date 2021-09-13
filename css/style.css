@@ -169,11 +169,36 @@
     background-color: #ededed
 }
 
+.green-chat {
+    background-color: #dcf8c6;
+}
+
+.img-chat{
+    background-image: url("/img/mine.jpg");
+
+}
+
 /* background *//* background *//* background */
+
+/* padding *//* padding *//* padding *//* padding */
 
 .pad-l-10 {
     padding-left: 10px;
 }
+
+.pad-l-50 {
+    padding-left: 50px;
+}
+
+.pad-r-50 {
+    padding-right: 50px;
+}
+
+.pad-top-20 {
+    padding-top: 20px;
+}
+
+/* padding *//* padding *//* padding *//* padding */
 
 /* :hover *//* :hover *//* :hover *//* :hover *//* :hover */
 
@@ -182,3 +207,65 @@
 }
 
 /* :hover *//* :hover *//* :hover *//* :hover *//* :hover */
+
+/* chat  *//* chat  *//* chat  *//* chat  */
+
+.max-w-30 {
+    max-width: 30%;
+}
+
+.h-85{
+    height: 85%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.message-back-color-white{
+    border-radius: 15px;
+    padding: 19px;
+    background-color: white;
+}
+
+.tip-left{
+    color: white;
+    font-size: 60px;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50% , -52%);
+}
+
+.tip-right{
+    color: #dcf8c6;
+    font-size: 60px;
+    top: 0%;
+    right: 0%;
+    transform: translate( 50% , -52%);
+}
+
+.send {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-back-color-green{
+    border-radius: 15px;
+    padding: 19px;
+    background-color: #dcf8c6;
+}
+
+/* chat  *//* chat  *//* chat  *//* chat  */
+
+/* position *//* position *//* position *//* position */
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-absol {
+    position: absolute;
+}
+
+/* position *//* position *//* position *//* position */
