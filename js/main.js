@@ -86,11 +86,11 @@ const app = new Vue (
                     ],
                 },
             ],
-            methods : {
-                chatSwich(element) {
-                        this.position = element;
+        },
+        methods: {
+            chatSwich(element) {
+                this.position = element;
                 }
-            }
         }
     }
 )
