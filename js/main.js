@@ -3,6 +3,7 @@ const app = new Vue (
     {
         el:"#root",
         data: {
+            userMes : "",
             position : 0,
             contacts: [
                 {
@@ -44,7 +45,7 @@ const app = new Vue (
                         {
                             date: '20/03/2020 16:35:00',
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                            status: 'received'
+                            status: 'sent'
                         }
                     ],
                 },
@@ -90,7 +91,19 @@ const app = new Vue (
         methods: {
             chatSwich(element) {
                 this.position = element;
-                }
+                },
+            stamp() {
+                let day = new Date();
+                this.contacts[this.position].messages.push({date : day.getDate()+"/"+day.getMonth()+"/"+ day.getFullYear()+" "+day.getHours()+":"+ day.getMinutes(),message : this.userMes,status: 'sent' });
+                this.userMes = ""
+                this.rispost();
+            },
+            rispost() {
+                setInterval(() => {
+                    let day = new Date();
+                    this.contacts[this.position].messages.push({date : day.getDate()+"/"+day.getMonth()+"/"+ day.getFullYear()+" "+day.getHours()+":"+ day.getMinutes(),message : "ok",status: 'sent' })
+                },1000)
+            }
         }
     }
 )
