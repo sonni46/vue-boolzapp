@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="chat img-chat h-85" >
-                    <div v-for ="mes in contacts.messages" class="received pad-l-50 pad-top-20 " v-for="position in contact">
+                    <div v-for ="(mes,index) in contacts[position].messages" class="received pad-l-50 pad-top-20 ">
                         <div class="max-w-30 message-back-color-white pos-rel">
                             <div class="tip-left pos-absol">
                                 <i class="fas fa-sort-down"></i>
@@ -78,7 +78,7 @@
                                 <span>{{mes.message}}</span>
                             </div>
                             <div class="data">
-                                data
+                                {{mes.date}}
                             </div>
                         </div>
                     </div>
