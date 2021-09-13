@@ -32,6 +32,22 @@
     align-items: center;
 }
 
+.text-send {
+    width: 80%;
+    height: 40px;
+    border: transparent;
+    outline:none;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+.text-bar {
+    min-height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 
 /* search *//* search *//* search *//* search */
 
@@ -96,7 +112,7 @@
     align-items: center;
 }
 
-.contact{
+.contact {
     height: 60px;
     display: flex;
     align-items: center;
@@ -117,6 +133,11 @@
 
 /* font  *//* font  *//* font  *//* font  *//* font  */
 
+.fa-grin-alt,
+.fa-microphone {
+    font-size: 25px;
+}
+
 .menu-icon {
     width: 30%;
     display: flex;
@@ -129,11 +150,12 @@
     justify-content: space-around;
 }
 
-.fas {
+.fas, 
+.far{
     cursor: pointer;
 }
 
-.blue-light{
+.blue-light {
     background-color: #9de1fe;
 }
 
@@ -145,7 +167,7 @@
     color: #9de1fe;
 }
 
-.search-bar .fas{
+.search-bar .fas {
     background-color: white;
     padding: 7px 25px;
 }
@@ -173,9 +195,8 @@
     background-color: #dcf8c6;
 }
 
-.img-chat{
-    background-image: url("/img/mine.jpg");
-
+.img-chat {
+    background-image: url("../img/mine.jpg");
 }
 
 /* background *//* background *//* background */
@@ -214,21 +235,21 @@
     max-width: 30%;
 }
 
-.h-85{
+.h-85 {
     height: 85%;
 }
 
-.w-30{
+.w-30 {
     width: 30%;
 }
 
-.message-back-color-white{
+.message-back-color-white {
     border-radius: 15px;
     padding: 19px;
     background-color: white;
 }
 
-.tip-left{
+.tip-left {
     color: white;
     font-size: 60px;
     top: 0%;
@@ -236,7 +257,7 @@
     transform: translate(-50% , -52%);
 }
 
-.tip-right{
+.tip-right {
     color: #dcf8c6;
     font-size: 60px;
     top: 0%;
@@ -250,10 +271,15 @@
     justify-content: flex-end;
 }
 
-.message-back-color-green{
+.message-back-color-green {
     border-radius: 15px;
     padding: 19px;
     background-color: #dcf8c6;
+}
+
+.data {
+    display: flex;
+    justify-content: flex-end
 }
 
 /* chat  *//* chat  *//* chat  *//* chat  */

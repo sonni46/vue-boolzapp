@@ -48,7 +48,7 @@
                     <input class="search" type="text" placeholder=" Cerca o inizia una nuova chat" >
                 </div>
                 <div class="rubric">
-                    <div v-for="key in contacts" class="contact pad-l-10" id="cont">
+                    <div v-for="key in contacts" class="contact pad-l-10"  @click="chatSwich(key)">
                         <img :src="`img/avatar${key.avatar}.jpg`" alt="">
                         <span class="pad-l-10">{{key.name}}</span>
                     </div>
@@ -57,9 +57,9 @@
             <div class="col-1">
                 <div class="friend">
                     <div class="avatar">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="`img/avatar${contacts[position].avatar}.jpg`" alt="">
                         <div class="info">
-                            <span>Marco sonni</span>
+                            <span>{{contacts[position].name}}</span>
                             <span class="traspar">Ultimo accesso alle</span>
                         </div>
                     </div>
@@ -68,13 +68,18 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
-                <div class="chat img-chat h-85">
-                    <div class="received pad-l-50 pad-top-20 ">
+                <div class="chat img-chat h-85" >
+                    <div v-for ="mes in contacts.messages" class="received pad-l-50 pad-top-20 " v-for="position in contact">
                         <div class="max-w-30 message-back-color-white pos-rel">
                             <div class="tip-left pos-absol">
                                 <i class="fas fa-sort-down"></i>
                             </div>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a tenetur iure omnis id ullam corrupti veritatis nobis voluptas non officia, ducimus deleniti et doloribus molestiae dolorem exercitationem impedit quas.</span>
+                            <div>
+                                <span>{{mes.message}}</span>
+                            </div>
+                            <div class="data">
+                                data
+                            </div>
                         </div>
                     </div>
                     <div class="send pad-r-50 pad-top-20 ">
@@ -83,8 +88,16 @@
                                 <i class="fas fa-sort-down"></i>
                             </div>
                             <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas ipsum accusamus nesciunt repudiandae, quae perferendis quam qui maiores dicta temporibus placeat voluptates officiis dolor eum aut, deleniti modi nostrum?</span>
+                            <div class="data">
+                                data
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="text-bar pad-l-10 ede">
+                    <i class="far fa-grin-alt"></i>
+                    <input class="text-send" type="text" placeholder="Scrivi un messaggio" >
+                    <i class="fas fa-microphone"></i>
                 </div>
             </div>
         </div>

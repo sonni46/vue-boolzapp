@@ -3,6 +3,7 @@ const app = new Vue (
     {
         el:"#root",
         data: {
+            position : 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -86,7 +87,9 @@ const app = new Vue (
                 },
             ],
             methods : {
-                
+                chatSwich(element) {
+                        this.position = element;
+                }
             }
         }
     }
