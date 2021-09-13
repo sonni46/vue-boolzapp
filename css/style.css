@@ -237,6 +237,10 @@ body {
 
 /* chat  *//* chat  *//* chat  *//* chat  */
 
+.chat {
+    overflow: overlay;
+}
+
 .max-w-30 {
     max-width: 30%;
 }
@@ -249,10 +253,22 @@ body {
     width: 30%;
 }
 
-.message-back-color-white {
+.received,
+.sent {
+    word-wrap: break-word;
+    width: 30%;
+    position: relative;
     border-radius: 15px;
     padding: 19px;
+}
+
+.received {
     background-color: white;
+}
+
+.sent {
+    background-color: #dcf8c6;
+    margin-left: 60%;
 }
 
 .tip-left {
@@ -271,16 +287,15 @@ body {
     transform: translate( 50% , -52%);
 }
 
-.send {
+/* .sent {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-}
+} */
 
 .message-back-color-green {
     border-radius: 15px;
     padding: 19px;
-    background-color: #dcf8c6;
 }
 
 .data {
@@ -288,7 +303,7 @@ body {
     justify-content: flex-end
 }
 
-/* chat  *//* chat  *//* chat  *//* chat  */
+/*  *//* chat  *//* chat  *//* chat  */
 
 /* position *//* position *//* position *//* position */
 

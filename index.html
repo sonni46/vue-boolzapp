@@ -48,7 +48,7 @@
                     <input class="search" type="text" placeholder=" Cerca o inizia una nuova chat" >
                 </div>
                 <div class="rubric">
-                    <div v-for="key in contacts" class="contact pad-l-10"  @click="chatSwich(key)">
+                    <div v-for="(key,index) in contacts" class="contact pad-l-10"  @click="chatSwich(index)">
                         <img :src="`img/avatar${key.avatar}.jpg`" alt="">
                         <span class="pad-l-10">{{key.name}}</span>
                     </div>
@@ -69,9 +69,12 @@
                     </div>
                 </div>
                 <div class="chat img-chat h-85" >
-                    <div v-for ="(mes,index) in contacts[position].messages" class="received pad-l-50 pad-top-20 ">
-                        <div class="max-w-30 message-back-color-white pos-rel" >
-                            <div class="tip-left pos-absol">
+                    <div v-for ="(mes,index) in contacts[position].messages" class="pad-l-50 pad-top-20  ">
+                        <div :class="mes.status">
+                            <div v-if="mes.status == 'received'" class="tip-left pos-absol">
+                                <i class="fas fa-sort-down"></i>
+                            </div>
+                            <div v-else class="tip-right pos-absol">
                                 <i class="fas fa-sort-down"></i>
                             </div>
                             <div>
@@ -79,17 +82,6 @@
                             </div>
                             <div class="data">
                                 {{mes.date}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="send pad-r-50 pad-top-20 ">
-                        <div class="max-w-30 message-back-color-green w-30 pos-rel">
-                            <div class="tip-right pos-absol">
-                                <i class="fas fa-sort-down"></i>
-                            </div>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas ipsum accusamus nesciunt repudiandae, quae perferendis quam qui maiores dicta temporibus placeat voluptates officiis dolor eum aut, deleniti modi nostrum?</span>
-                            <div class="data">
-                                data
                             </div>
                         </div>
                     </div>
