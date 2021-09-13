@@ -101,7 +101,7 @@ const app = new Vue (
             rispost() {
                 setInterval(() => {
                     let day = new Date();
-                    this.contacts[this.position].messages.push({date : day.getDate()+"/"+day.getMonth()+"/"+ day.getFullYear()+" "+day.getHours()+":"+ day.getMinutes(),message : "ok",status: 'sent' })
+                    this.contacts[this.position].messages.push({date : day.getDate()+"/"+day.getMonth()+"/"+ day.getFullYear()+" "+day.getHours()+":"+ day.getMinutes(),message : "ok",status: 'received' })
                 },1000)
             }
         }
