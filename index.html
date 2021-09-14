@@ -45,10 +45,10 @@
                 </div>
                 <div class="search-bar pad-l-10 ede">
                     <i class="fas fa-search"></i>
-                    <input class="search" type="text" placeholder=" Cerca o inizia una nuova chat" >
+                    <input class="search" v-model="search" @keyUp.enter="" type="text" placeholder=" Cerca o inizia una nuova chat" >
                 </div>
                 <div class="rubric">
-                    <div v-for="(key,index) in contacts" class="contact pad-l-10"  @click="chatSwich(index)">
+                    <div v-for="(key,index) in contacts || num in filterAr" class="contact pad-l-10" :class="(index === position) ? 'black' : 'white'" @click="chatSwich(index)">
                         <img :src="`img/avatar${key.avatar}.jpg`" alt="">
                         <span class="pad-l-10">{{key.name}}</span>
                     </div>
@@ -68,7 +68,7 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
-                <div class="chat img-chat h-85" >
+                <div class="chat img-chat" >
                     <div v-for ="(mes,index) in contacts[position].messages" class="pad-l-50 pad-top-20  ">
                         <div :class="mes.status">
                             <div v-if="mes.status == 'received'" class="tip-left pos-absol">

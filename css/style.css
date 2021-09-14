@@ -24,7 +24,7 @@ body {
 }
 /* search *//* search *//* search *//* search */
 .search {
-    width: 80%;
+    width: 75%;
     height: 30px;
     border: transparent;
     outline:none;
@@ -188,6 +188,14 @@ body {
 
 /* background *//* background *//* background */
 
+.black {
+    background-color: rgb(175, 175, 175);
+}
+
+.white {
+    background-color: white;
+}
+
 .green-white {
     background: rgb(54,166,119); 
     background: linear-gradient(180deg, rgba(54,166,119,1) 14%, rgba(232,242,215,1) 14%);
@@ -239,6 +247,7 @@ body {
 
 .chat {
     overflow: overlay;
+    height: 83%;
 }
 
 .max-w-30 {
@@ -286,12 +295,6 @@ body {
     right: 0%;
     transform: translate( 50% , -52%);
 }
-
-/* .sent {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-} */
 
 .message-back-color-green {
     border-radius: 15px;
