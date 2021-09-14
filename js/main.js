@@ -3,7 +3,6 @@ const app = new Vue (
     {
         el:"#root",
         data: {
-            filterAr : [],
             search : "",
             userMes : "",
             position : "0",
@@ -106,12 +105,13 @@ const app = new Vue (
                     this.contacts[this.position].messages.push({date : day.getDate()+"/"+day.getMonth()+"/"+ day.getFullYear()+" "+day.getHours()+":"+ day.getMinutes(),message : "ok",status: 'received' })
                 },1000)
             },
-            filteredList() {
-                this.filterAr = this.contacts.filter((el) => {
-                 el.name.toLowerCase().includes(this.search.toLowerCase());
-                })
-                return filterAr
+        },
+        computed:{
+            filteredList: function() {
+                return this.contacts.filter((contact) => {
+                    return contact.name.toLowerCase().match(this.search.toLowerCase());
+                });
              }
-        } 
+        }
     }
 )

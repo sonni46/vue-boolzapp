@@ -48,9 +48,9 @@
                     <input class="search" v-model="search" @keyUp.enter="" type="text" placeholder=" Cerca o inizia una nuova chat" >
                 </div>
                 <div class="rubric">
-                    <div v-for="(key,index) in contacts || num in filterAr" class="contact pad-l-10" :class="(index === position) ? 'black' : 'white'" @click="chatSwich(index)">
-                        <img :src="`img/avatar${key.avatar}.jpg`" alt="">
-                        <span class="pad-l-10">{{key.name}}</span>
+                    <div v-for="(contact,index) in filteredList" class="contact pad-l-10" :class="(index === position) ? 'black' : 'white'" @click="chatSwich(index)">
+                        <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                        <span class="pad-l-10">{{contact.name}}</span>
                     </div>
                 </div>
             </div>
